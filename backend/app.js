@@ -1,5 +1,6 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const path = require("path");
 const app = express();
 
 if (process.env.NODE_ENV !== 'production') {
@@ -18,5 +19,10 @@ const user = require('./routes/user');
 app.use('/api/post', post);
 app.use('/api/user', user);
 
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+});
 
 module.exports = app;
