@@ -1,0 +1,55 @@
+.home {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  height: 100vh;
+}
+
+.homeleft {
+  /* background-image: url("https://c4.wallpaperflare.com/wallpaper/569/127/686/gray-texture-wallpaper-preview.jpg"); */
+  background-image: linear-gradient(to right, #f5f7fa, #b8c6db);
+  /* background-image: linear-gradient(to left, #8e9eab, #eef2f3); */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+.homeright {
+  padding: 2vmax;
+  box-sizing: border-box;
+  overflow-y: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.homeUser {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.507);
+  transition: all 0.5s;
+}
+.homeUser > img {
+  height: 3vmax;
+  width: 3vmax;
+  margin: 1vmax;
+  border-radius: 100%;
+  border: 3px solid rgb(255, 201, 201);
+}
+
+.homeUser:hover {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .homeleft {
+    padding: 0;
+    min-height: 90vh;
+  }
+}
