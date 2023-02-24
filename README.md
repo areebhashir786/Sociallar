@@ -1,4 +1,4 @@
 # Sociallar
 
-##Live Project URL
+Live Project URL
 https://sociallar-mern-backend.onrender.com/
